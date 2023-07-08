@@ -18,8 +18,9 @@ a:hover {
   display: block;
   margin: 30px auto;
 }
-.footer {
+.links {
   text-align: center;
+  margin-top: 50px;
 }
 .degree {
   display: inline;
