@@ -9,6 +9,7 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="/src/style.css" />
     <title>Weather app</title>
   </head>
@@ -17,14 +18,18 @@
       <div class="weather-app">
         <di class="row">
           <div class="col-6">
-            <h1>Paris</h1>
+            <h1 id="city"></h1>
             <ul>
               <li>Saturday 18:34</li>
               <li>
                 Humidity:
-                <span class="Humidity-num">37%</span>
+                <span class="pink-text">
+                  <span class="Humidity-num"></span>%</span
+                >
                 , Wind:
-                <span class="wind-num">4.12km/h</span>
+                <span class="pink-text">
+                  <span class="wind-num"></span> km/h</span
+                >
               </li>
             </ul>
           </div>
@@ -40,10 +45,10 @@
               <div class="col-8">
                 <ul class="degree">
                   <li>
-                    <span class="temperature">33</span>
+                    <span class="temperature"></span>
                     <span class="units">°C</span>
                   </li>
-                  <li class="weather-desc">clear sky</li>
+                  <li class="weather-desc"></li>
                 </ul>
               </div>
             </di>
