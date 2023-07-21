@@ -6,7 +6,7 @@ ul {
 }
 a {
   text-decoration: none;
-  color: rgb(40, 200, 165);
+  color: #31d2f2;
 }
 a:hover {
   text-decoration: underline;
@@ -17,6 +17,9 @@ a:hover {
   border-radius: 10px;
   padding: 40px;
   display: block;
+  margin: auto;
+}
+.container {
   margin: 30px auto;
 }
 .links {

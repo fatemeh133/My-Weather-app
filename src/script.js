@@ -1,7 +1,3 @@
-let APIKey = "dfe65tb0afb4b600dd45b2f7o23f463d";
-let city = "Tehran";
-let APIURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${APIKey}&units=metric`;
-
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -37,5 +33,19 @@ function Weather(response) {
   pic.alt = response.data.condition.icon;
   date.innerHTML = formatDate(response.data.time * 1000);
 }
+function submit(event) {
+  event.preventDefault();
+  let formInput = document.querySelector(".form-control");
+  search(formInput.value);
+}
 
-axios.get(APIURL).then(Weather);
+function search(city) {
+  let APIKey = "dfe65tb0afb4b600dd45b2f7o23f463d";
+  let APIURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${APIKey}&units=metric`;
+  axios.get(APIURL).then(Weather);
+}
+
+search("Tehran");
+
+let form = document.querySelector("#sesarchForm");
+form.addEventListener("submit", submit);

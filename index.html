@@ -17,6 +17,25 @@
     <div class="container">
       <div class="weather-app">
         <di class="row">
+          <form id="sesarchForm" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city..."
+                  class="form-control"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="search"
+                  class="btn btn-info w-100"
+                  id=""
+                />
+              </div>
+            </div>
+          </form>
           <div class="col-6">
             <h1 id="city"></h1>
             <ul>
@@ -36,11 +55,7 @@
           <div class="col-6">
             <di class="row">
               <div class="col-4">
-                <img
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-                  alt="clear-sky-day"
-                  class="pic"
-                />
+                <img src="" alt="clear-sky-day" class="pic" />
               </div>
               <div class="col-8">
                 <ul class="degree">
