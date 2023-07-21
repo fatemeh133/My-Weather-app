@@ -20,7 +20,6 @@ function formatDate(timestamp) {
 }
 
 function Weather(response) {
-  console.log(response.data);
   let temperature = document.querySelector(".temperature");
   let description = document.querySelector(".weather-desc");
   let city = document.querySelector("#city");
@@ -35,6 +34,7 @@ function Weather(response) {
   Humidity.innerHTML = Math.round(response.data.temperature.humidity);
   wind.innerHTML = Math.round(response.data.wind.speed);
   pic.src = response.data.condition.icon_url;
+  pic.alt = response.data.condition.icon;
   date.innerHTML = formatDate(response.data.time * 1000);
 }
 
