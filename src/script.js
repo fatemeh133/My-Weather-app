@@ -1,3 +1,31 @@
+function forcast() {
+  let forcast = document.querySelector(".forcast");
+
+  let html = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    html =
+      html +
+      `<div class="col-2 px-4">
+            <div class="forcast-date">${day}</div>
+            <div>
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                alt=""
+                class="forcast-img"
+              />
+              <div class="forecast-temp">
+                <span class="forcast-max">18</span>°
+                <span class="forcast-min"> 12°</span>
+              </div>
+          </div>
+        </div>`;
+  });
+
+  html = html + `</div>`;
+  forcast.innerHTML = html;
+}
+
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -49,3 +77,5 @@ search("Tehran");
 
 let form = document.querySelector("#sesarchForm");
 form.addEventListener("submit", submit);
+
+forcast();
